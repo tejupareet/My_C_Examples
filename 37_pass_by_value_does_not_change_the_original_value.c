@@ -2,6 +2,11 @@
 Name: Teju Pareet
 by below program we can understand that by passing value to the function the function cannot
 modify the original value 
+we can modefy value by returning from function and collecting it in the main functoin
+
+or
+
+
 it can be changed by only pass by reference.
 */
 
