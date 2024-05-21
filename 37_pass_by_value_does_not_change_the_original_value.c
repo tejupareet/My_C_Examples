@@ -4,10 +4,24 @@ by below program we can understand that by passing value to the function the fun
 modify the original value 
 we can modefy value by returning from function and collecting it in the main functoin
 
+pass by value : not possible to return more then one value
+		cannot modify more then one value
+  		by using void we cannot modify a single value
+    		by returning we can modify a single value
+
 or
 
+if you want to modify more then one value there is a another way that is called PASS BY REFERENCE 
+To use pass by reference we need to know pointers
+*/
 
-it can be changed by only pass by reference.
+/*
+another note:   we canot have brackets on left side of calling function 
+								i.e.:   (x,y)=modify(x,y);
+								          ^
+		  						          |
+		    						  this is compile time error
+	      							this is meaning of function calling without name
 */
 
 
