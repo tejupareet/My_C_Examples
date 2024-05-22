@@ -70,6 +70,7 @@ by reading inputs like this we can read only charecters from user
 untill and unless we enter rather then alpabets it will read 
 when we enter other char other then alphabets it will discard
 */
+/*
 int main()
 {
 	char ch[10];
@@ -81,6 +82,27 @@ int main()
 						 //by adding space between a-z' 'A-Z we can also read spaces because space is also an charecters
 	printf("%s",ch);
 	
+	return 0;
+}*/
+
+/*sscanf() reads the input from string or buffer 
+
+sscanf(address_of_string,"format_specifier",&var,&var2);
+
+*/
+
+int main()
+{
+	int age;
+	char ch;
+	char arr_4[10];
+	char arr_1[10];
+	char arr_2[10];
+	char arr_3[]="I am 30 years ";
+	
+	sscanf(arr_3,"%c%s%d%s",&ch,&arr_1,&age,&arr_4);
+	
+	printf("%s",arr_3);// output = I am 30 years
 	return 0;
 }
 
