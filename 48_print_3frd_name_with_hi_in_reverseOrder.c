@@ -1,4 +1,25 @@
+/*simple way to do it is
 
+
+#include<stdio.h>
+
+int main()
+{
+	char str[100]={'\0'};
+	char friend1[100]={'\0'};
+	char friend2[100]={'\0'};
+	char friend3[100]={'\0'};
+	
+	printf("Enter your friends name: ");
+	scanf("%[a-z , A-Z]",str);
+	
+	sscanf(str,"%s%s%s",friend3,friend2,friend1);
+	printf("hi %s, %s, and %s",friend1,friend2,friend3);
+}
+
+
+
+*/
 #include <stdio.h>
 
 void print_friends_names(char *names) {
