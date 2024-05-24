@@ -1,93 +1,3 @@
-#include <stdio.h>
-/*
-void reverseWords(char *s) {
-    char *word_start = s;
-    char *word_end = s;
-    char *word_starts[50]; // Array to store pointers to start of each word
-
-    int word_count = 0;
-
-    // Find the end of each word and store pointers to start of each word
-    while (*word_end != '\0') {
-        if (*word_end == ',') {
-            word_starts[word_count++] = word_start;
-            word_start = word_end + 2; // Skip comma and space
-        }
-        word_end++;
-    }
-    // Store the last word as well
-    word_starts[word_count++] = word_start;
-
-    printf("Hi ");
-    // Print each word in reverse order
-    for (int i = word_count - 1; i >= 0; i--) {
-        char *p = word_starts[i];
-        while (*p != '\0' && *p != ',') {
-            printf("%c", *p);
-            p++;
-        }
-        if (i != 0)
-            printf(", ");
-    }
-}
-
-int main() {
-    char input[] = "Mahesh, Suresh, Devesh, Ramesh";
-    reverseWords(input);
-    printf("\n");
-    return 0;
-}
-*/
-/*
-void print_reverse(char str[]);
-
-int main()
-{
-	char str[100];
-	printf("Enter the string : ");
-	scanf("%[a-z , A-Z]",str);
-	
-	print_reverse(str);
-	
-	return 0;
-}
-
-void print_reverse(char *str)
-{
-	int i=0,j=0,n=0,m,k=0,comma=0;
-	while(str[i]!='\0')
-	{
-		if(str[i]==',')
-		{
-			comma++;
-		}
-		if((str[i]==',')&&j<=0)
-		{
-			j=i;
-		}
-		if((j>0)&&(str[i]==','))
-		{
-			n=i;
-		}
-		i++;
-	}
-	printf("number of commas : %d\n",comma);
-	printf("%d %d %d\n",j,n,i);
-	
-	printf("Hi ");
-	while(comma)
-	{
-		for(m=i; str[m]!='\0'; m++)
-		{
-			printf("%c",str[m]);
-			
-		}
-		comma--;
-	}
-	
-	
-}
-*/
 
 #include <stdio.h>
 
@@ -118,9 +28,35 @@ void print_friends_names(char *names) {
 int main() {
     // Test the function
     char names[100];// = "Mahesh, Suresh, Devesh";
+	printf("Enter your friends name: ");
 	scanf("%[a-z , A-Z]",names);
     print_friends_names(names);
 
     return 0;
 }
+
+/*
+Explanation:
+
+void print_friends_names(char *names): This function takes a character pointer names as input, which is expected to be a string containing comma-separated names.
+
+char *friend1, *friend2, *friend3;: These are pointers to characters, which will hold the addresses of the start of each name in the input string.
+
+friend1 = names;: Initially, friend1 points to the beginning of the input string names.
+
+while (*names && *names != ',') { names++; }: This loop iterates through the characters of the input string until it finds a comma or reaches the end of the string. 
+It effectively moves the names pointer to the end of the first name.
+
+if (*names == ',') { *names++ = '\0'; }: If a comma is found, it replaces the comma with a null terminator ('\0') and moves the names pointer to the beginning of the next name.
+
+friend2 = names;: Now, friend2 is assigned the address of the beginning of the next name.
+
+The second while loop and if statement do the same process for the second name.
+
+friend3 = names;: Finally, friend3 is assigned the address of the beginning of the third name.
+
+printf("Hi %s, %s and %s\n", friend3, friend2, friend1);: This line prints the names in reverse order, using the pointers friend3, friend2, and friend1, which now point to the beginnings of the third, second, and first names, respectively.
+
+In the main function, scanf("%[a-z , A-Z]", names); reads input from the user until it encounters a character not in the specified range (lowercase letters, uppercase letters, spaces, and commas), storing it in the names array. Then, print_friends_names(names); calls the function to process and print the names.
+*/
 
