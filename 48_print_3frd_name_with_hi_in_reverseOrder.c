@@ -13,7 +13,7 @@ int main()
 	printf("Enter your friends name: ");
 	scanf("%[a-z , A-Z]",str);
 	
-	sscanf(str,"%s%s%s",friend3,friend2,friend1);
+	sscanf(str,"%s%s%s",friend3,friend2,friend1);//storing first name to 3friend
 	printf("hi %s, %s, and %s",friend1,friend2,friend3);
 }
 
