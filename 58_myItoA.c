@@ -92,7 +92,7 @@ char* my_itoa(int num, char* str, int base)
   
     str[i] = '\0';
  
-   // my_reverse(str, i);
+   my_reverse(str, i);
  
     return str;
 }
