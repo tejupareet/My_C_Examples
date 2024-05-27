@@ -49,8 +49,11 @@ void replace_blank(char *str)//function definition
         {
             str[j] = str[i];
             j++;
+			
         }
+		
         i++;
+		
     }   
     str[j] ='\0';//after all space replacing by one space making last char+1=null 
 
