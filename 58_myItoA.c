@@ -80,7 +80,7 @@ char* my_itoa(int num, char* str, int base)
     }
   
     while (num != 0) {
-        int rem = num % base;
+        int rem = num % base;//
         str[i++] = (rem > 9)? (rem-10) + 'A' : rem + '0';
         num = num/base;
     }
@@ -92,7 +92,7 @@ char* my_itoa(int num, char* str, int base)
   
     str[i] = '\0';
  
-    my_reverse(str, i);
+   // my_reverse(str, i);
  
     return str;
 }

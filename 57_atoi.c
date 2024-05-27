@@ -55,12 +55,17 @@ int myAtoi(const char* str)//calling function
     }
     if (str[i] == '-' || str[i] == '+')//condtion for sign
     {
-        sign = 1 - 2 * (str[i++] == '-');
+        sign = 1 - 2 * (str[i++] == '-');//here if str[i++]is post increment so it takes i value if str[i] is '-' signe the 
+										 //it looks like sign = 1 - 2 * 1
+										 //                   =-1
+										 //if str[i] is '+' then it returns '0'
+										 //              sign = 1 -2 * 0
+										 //					  = 1;
     }
     while (str[i] >= '0' && str[i] <= '9')//condtion to get only diits
     {
      
-        base = 10 * base + (str[i++] - '0');
+        base = 10 * base + (str[i++] - '0');//
     }
     return base * sign;//returning intigers along with sign to called function
 }
